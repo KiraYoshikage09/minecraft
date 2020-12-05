@@ -1,0 +1,57 @@
+﻿body{
+	background: fixed url(../img/kamenn.png);
+	background-size: cover;
+	margin: 0;
+	padding: 20px;
+	color: #DEB887;
+}
+
+.wrapper{
+	margin: 0 auto;
+	width: 700px;
+	background-color: #727272;
+	padding: 20px;
+}
+.gifki{
+	width: 10%;
+}
+.idblocks{
+	float: left;
+	padding-right: 30px;
+}
+.matix{
+	width: 100%;
+}
+.decor{
+	text-align: center;
+}
+.minceraft{
+	width: 60%;
+}
+.ul{
+	list-style: none;
+}	
+.ul a{
+	display: inline-block;
+	padding: 12px;
+	background-color: #fa8e47;
+	border-radius: 20px;
+	text-decoration: none;
+}
+.ul li{
+	display: inline-block;
+}
+.table{
+   border-collapse: collapse;
+   width: 100%;
+
+}
+.table td{
+  padding: 10px;
+  border: 2px solid brown;
+  color: goldenrod;
+
+}
+.table img{
+	width: 100%;
+}

@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Квитанция платежа</title>
+    </head>
+    <body>
+        <form id="pdf-receipt" action="" method="POST">
+            <input id="key-id" type="hidden" name="keyId" value="">
+            <input id="token" type="hidden" name="token" value="">
+        </form>
+        <script>
+            (function (document, location) {
+                var paramsString = location.hash || '';
+                if (paramsString.charAt(0) === '#') {
+                    paramsString = paramsString.substring(1);
+                }
+                var indexOfQuestionMark = paramsString.indexOf('?');
+                if (indexOfQuestionMark >= 0) {
+                    paramsString = paramsString.substring(indexOfQuestionMark + 1);
+                } else {
+                    paramsString = '';
+                }
+                var params = {};
+                paramsString.split('&').forEach(function (hashPart) {
+                    var parts = hashPart.split('=');
+                    var param = parts[0] || '';
+                    var value = parts[1] || '';
+                    params[param] = value;
+                });
+                document.getElementById('key-id').value = params.keyId || '';
+                document.getElementById('token').value = params.token || '';
+                document.getElementById('pdf-receipt').submit();
+            }(document, location));
+        </script>
+    </body>
+</html>
